@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <header>
+            <h1 id="cityName" class="cityName"></h1>
+            <p id="date"></p>
+        </header>
+
+        <div id="current-time">
+            <div>
+                <i id="current-icon"></i>
+            </div>
+            <div>
+                <p id="current-temperature" class="bold"></p>
+                <p id="current-description" id="current-description"></p>
+            </div>
+        </div>
+
+        <div id="current-data">
+            <div>
+                <p class="highlight" class="bold" id="high"></p>
+                <p>High</p>
+            </div>
+            <div>
+                <p class="highlight" class="bold" id="low"></p>
+                <p>Low</p>
+            </div>
+            <div>
+                <p class="highlight" class="bold" id="wind"></p>
+                <p>Wind</p>
+            </div>
+            <div>
+                <p class="highlight" class="bold" id="humidity"></p>
+                <p>Humidity</p>
+            </div>
+            <div>
+                <p class="highlight" class="bold" id="sunrise"></p>
+                <p>Sunrise</p>
+            </div>
+            <div>
+                <p class="highlight" class="bold" id="sunset"></p>
+                <p>Sunset</p>
+            </div>
+        </div>
+
+        <p id="todays-weather-label">Todays Weather</p>
+        <div id="todays-weather">
+            <div>
+                <p id="1dt" class="bold">3am</p>
+                <i id="1it"></i>
+                <p id="1tt" class="bold">14°</p>
+            </div>
+            <div>
+                <p id="2dt" class="bold">6am</p>
+                <i id="2it"></i>
+                <p id="2tt" class="bold"></p>
+            </div>
+            <div>
+                <p id="3dt" class="bold">9am</p>
+                <i id="3it"></i>
+                <p id="3tt" class="bold"></p>
+            </div>
+            <div>
+                <p id="4dt" class="bold">12am</p>
+                <i id="4it"></i>
+                <p id="4tt" class="bold"></p>
+            </div>
+            <div>
+                <p id="5dt" class="bold">15pm</p>
+                <i id="5it"></i>
+                <p id="5tt" class="bold"></p>
+            </div>
+            <div>
+                <p id="6dt" class="bold">18pm</p>
+                <i id="6it"></i>
+                <p id="6tt" class="bold"></p>
+            </div>
+            <div>
+                <p id="7dt" class="bold">21pm</p>
+                <i id="7it"></i>
+                <p id="7tt" class="bold"></p>
+            </div>
+        </div>
+
+        <p>Next 5 days</p>
+        <div id="next-days">
+            <div>
+                <p id="1d"></p>
+                <i id="1i"></i>
+                <p id="1t"></p>
+            </div>
+            <div>
+                <p id="2d"></p>
+                <i id="2i"></i>
+                <p id="2t"></p>
+            </div>
+            <div>
+                <p id="3d"></p>
+                <i id="3i"></i>
+                <p id="3t"></p>
+            </div>
+            <div>
+                <p id="4d"></p>
+                <i id="4i"></i>
+                <p id="4t"></p>
+            </div>
+            <div>
+                <p id="5d"></p>
+                <i id="5i"></i>
+                <p id="5t"></p>
+            </div>
+        </div>
+
+        <div id="next-days-second">
+            <div>
+                <p id="1ds" class="bold"></p>
+                <p id="1dates"></p>
+            </div>
+
+            <div>
+                <i>icone</i>
+            </div>
+
+            <div>
+                <p id="1low" class="bold"></p>
+                <p>Low</p>
+            </div>
+
+            <div>
+                <p id="1high" class="bold"></p>
+                <p>High</p>
+            </div>
+
+            <div>
+                <p id="1wind" class="bold"></p>
+                <p>Wind</p>
+            </div>
+
+            <div>
+                <p id="1hum" class="bold"></p>
+                <p>Humidity</p>
+            </div>
+
+            <div>
+                <p id="2ds" class="bold"></p>
+                <p id="2dates"></p>
+            </div>
+
+            <div>
+                <i>icone</i>
+            </div>
+
+            <div>
+                <p id="2low" class="bold"></p>
+                <p>Low</p>
+            </div>
+
+            <div>
+                <p id="2high" class="bold"></p>
+                <p>High</p>
+            </div>
+
+            <div>
+                <p id="2wind" class="bold"></p>
+                <p>Wind</p>
+            </div>
+
+            <div>
+                <p id="2hum" class="bold"></p>
+                <p>Humidity</p>
+            </div>
+
+            <div>
+                <p id="3ds" class="bold"></p>
+                <p id="3dates"></p>
+            </div>
+
+            <div>
+                <i>icone</i>
+            </div>
+
+            <div>
+                <p id="3low" class="bold"></p>
+                <p>Low</p>
+            </div>
+
+            <div>
+                <p id="3high" class="bold"></p>
+                <p>High</p>
+            </div>
+
+            <div>
+                <p id="3wind" class="bold"></p>
+                <p>Wind</p>
+            </div>
+
+            <div>
+                <p id="3hum" class="bold"></p>
+                <p>Humidity</p>
+            </div>
+
+            <div>
+                <p id="4ds" class="bold"></p>
+                <p id="4dates"></p>
+            </div>
+
+            <div>
+                <i>icone</i>
+            </div>
+
+            <div>
+                <p id="4low" class="bold"></p>
+                <p>Low</p>
+            </div>
+
+            <div>
+                <p id="4high" class="bold"></p>
+                <p>High</p>
+            </div>
+
+            <div>
+                <p id="4wind" class="bold"></p>
+                <p>Wind</p>
+            </div>
+
+            <div>
+                <p id="4hum" class="bold"></p>
+                <p>Humidity</p>
+            </div>
+
+            <div>
+                <p id="5ds" class="bold"></p>
+                <p id="5dates"></p>
+            </div>
+
+            <div>
+                <i>icone</i>
+            </div>
+
+            <div>
+                <p id="5low" class="bold"></p>
+                <p>Low</p>
+            </div>
+
+            <div>
+                <p id="5high" class="bold"></p>
+                <p>High</p>
+            </div>
+
+            <div>
+                <p id="5wind" class="bold"></p>
+                <p>Wind</p>
+            </div>
+
+            <div>
+                <p id="5hum" class="bold"></p>
+                <p>Humidity</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
