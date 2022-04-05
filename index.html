@@ -19,12 +19,26 @@
 </head>
 
 <body>
+    <div id="error-messages">
+        <p>:(</p>
+        <p id="error-p"></p>
+        <p>Please, reload the page.</p>
+    </div>
+
     <div class="container" id="container">
         <header>
-            <h1 id="cityName" class="cityName"></h1>
-            <p id="date"></p>
+            <div>
+                <h1 id="cityName" class="cityName"></h1>
+                <p id="date"></p>
+            </div>
+            <div>
+                <select id="units" onChange="changeUnits()" value="metric">
+                  <option value="metric" style="color:black">Metric</option>
+                  <option value="imperial" style="color:black">Imperial</option>
+                </select>
+            </div>
         </header>
-
+    <div id="flex-div">
         <div id="current-time">
             <div>
                 <i id="current-icon"></i>
@@ -61,13 +75,14 @@
                 <p>Sunset</p>
             </div>
         </div>
+    </div>
 
         <p id="todays-weather-label">Todays Weather</p>
         <div id="todays-weather">
             <div>
                 <p id="1dt" class="bold">3am</p>
                 <i id="1it"></i>
-                <p id="1tt" class="bold">14°</p>
+                <p id="1tt" class="bold"></p>
             </div>
             <div>
                 <p id="2dt" class="bold">6am</p>
@@ -137,7 +152,7 @@
             </div>
 
             <div>
-                <i>icone</i>
+                <i id="1is"></i>
             </div>
 
             <div>
@@ -166,7 +181,7 @@
             </div>
 
             <div>
-                <i>icone</i>
+                <i id="2is"></i>
             </div>
 
             <div>
@@ -195,7 +210,7 @@
             </div>
 
             <div>
-                <i>icone</i>
+                <i id="3is"></i>
             </div>
 
             <div>
@@ -224,7 +239,7 @@
             </div>
 
             <div>
-                <i>icone</i>
+                <i id="4is"></i>
             </div>
 
             <div>
@@ -253,7 +268,7 @@
             </div>
 
             <div>
-                <i>icone</i>
+                <i id="5is"></i>
             </div>
 
             <div>
@@ -276,6 +291,10 @@
                 <p>Humidity</p>
             </div>
         </div>
+	<footer>
+		<p>Is your location not right? Please, check if you're using VPN</p>
+		<p>Data providade by <a href="https://openweathermap.org/"><strong>Open Weather</strong></a><p>
+	</footer>
     </div>
 </body>
 
