@@ -1,7 +1,7 @@
 # Weather App
 
 ## Description
-Oh this application you'll be able to see the weather forecast of your area, considering that you're not using VPN or similar features, the application will locate you by using your IP address through [IpInfo](https://ipinfo.io/) API.
+On this application you'll be able to see the weather forecast of your area, considering that you're not using VPN or similar features, the application will locate you by using your IP address through [IpInfo](https://ipinfo.io/) API.
 
 ## How it works
 When you access the [Weather App](https://weatherappn.netlify.app/), [Axios](https://github.com/axios/axios) hit the IPInfo API with your IP address. <br>
