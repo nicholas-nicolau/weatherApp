@@ -28,5 +28,5 @@ The displayed data will change depending on the size  of your screen.
 If you do have any problem accessing this app you can call on me at any time here on my GitHub page or through my [Linkedin](https://linkedin.com/in/nicholas-nicolau)
 
 ## Authors and acknowledgment
-Thanks to for the layout's inspiration, it really has helped me a lot!. <br>
+Thanks to [Jon Keeping](https://medium.com/@JonUK/designing-and-developing-a-responsive-weather-app-webpage-part-1-b155b004a5ba)for the layout's inspiration, it really has helped me a lot!. <br>
 Thanks to the [Weather Icons](https://erikflowers.github.io/weather-icons/) for making it really easy to use icons for Weather Apps.
