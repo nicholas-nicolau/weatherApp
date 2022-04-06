@@ -6,6 +6,10 @@
     font-family: 'Source Serif Pro', serif;
 }
 
+body{
+    background: rgb(20,136,204) 100%;;
+}
+
 p{
     font-weight: 500;
     color: white;
